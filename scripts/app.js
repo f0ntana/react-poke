@@ -63,7 +63,7 @@ class PokerDex extends React.Component {
 					{
 						state.pokemonList
 						.filter((pokemon)=>{
-							return pokemon.name.indexOf(state.nameFilter.toLowerCase()) !== 1;
+							return pokemon.name.indexOf(state.nameFilter.toLowerCase()) !== -1;
 						})
 						.map((pokemon, index)=>{
 							var pokeNumber = PokeService.getNumberFromUrl(pokemon.resource_uri, true);

@@ -133,7 +133,7 @@
 						'ul',
 						{ className: 'poke-list' },
 						state.pokemonList.filter(function (pokemon) {
-							return pokemon.name.indexOf(state.nameFilter.toLowerCase()) !== 1;
+							return pokemon.name.indexOf(state.nameFilter.toLowerCase()) !== -1;
 						}).map(function (pokemon, index) {
 							var pokeNumber = PokeService.getNumberFromUrl(pokemon.resource_uri, true);
 							return _react2.default.createElement(
